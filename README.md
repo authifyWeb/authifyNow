@@ -1,4 +1,4 @@
-<h3> authifyNow is a free broswer extension for users to make sure that a URL or a website you are visiting belongs to an authentic business/ organisation and not a phoney scammer's phishing scam.  </h3>
+<h3> authifyNow is a free browser extension for users to make sure that a URL or a website you are visiting belongs to an authentic business/ organisation and not a phoney scammer's phishing scam.  </h3>
 
 authifyURL get data from [authifyURL-Database](https://github.com/authifyWeb/authifyURL-Database)
 
