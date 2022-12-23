@@ -32,5 +32,5 @@ We use GitHub Pages(Owned my Microsoft) to host our website, and hence by defaul
 
 <p>By visiting this page on our website: <a href="https://github.com/authifyWeb/authifyURL/discussions" target="_blank" rel="external nofollow noopener">https://github.com/authifyWeb/authifyURL/discussions</a></p>
 
-<a href="[https://github.com/authifyWeb/authifyNow/blob/main/documentation/terms.md](https://github.com/authifyWeb/authifyNow/blob/main/documentation/Terms.md)" target="_blank">Terms & Conditions</a>
+<a href="https://github.com/authifyWeb/authifyNow/blob/main/documentation/terms.md" target="_blank">Terms & Conditions</a>
  
