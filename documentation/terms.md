@@ -52,4 +52,4 @@ As long as the website, addons and the information and services on the website a
 <li>By visiting this page on our website: <a href="https://github.com/authifyWeb/authifyURL/discussions" target="_blank" rel="external nofollow noopener">https://github.com/authifyWeb/authifyURL/discussions</a></li>
 </ul>
 
-<a href="https://github.com/authifyWeb/authifyNow/blob/main/documentation/Privacy-Policy.md" target="_blank">Privacy Policy</a>
+<a href="https://github.com/authifyWeb/authifyNow/blob/main/documentation/privacy-policy.md" target="_blank">Privacy Policy</a>
