@@ -1,0 +1,1 @@
+#### This folder is used to check whether the user has installed the latest version of the plugin. Whenever a new version is released make sure to upload the latest.json file to the latest released version.
