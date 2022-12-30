@@ -6,9 +6,9 @@ authifyNow get data from [authifyURL-Database](https://github.com/authifyWeb/aut
 ## <ins>Quick Links</ins>
 * [Why I created this?](https://github.com/authifyWeb/authifyNow/edit/main/README.md#why-i-created-this)
 * [Data Source](https://github.com/authifyWeb/authifyURL-Database)
-* [Installation]()  
-  - [Chromium]()
-  - [Firefox]()
+* [Installation](https://github.com/authifyWeb/authifyNow#installation)  
+  - [Chromium](https://github.com/authifyWeb/authifyNow#chromium)
+  - Firefox
 * [How to Trust](https://github.com/authifyWeb/authifyURL-Database#how-to-trust)
 * [Disclaimer](https://github.com/authifyWeb/authifyNow#disclaimer)
 * [Copyright](https://github.com/authifyWeb/authifyNow#copyright)
