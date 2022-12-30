@@ -1,0 +1,49 @@
+{
+    "manifest_version": 3,
+    "name": "authifyNow",
+	"author":"webVerts",
+    "version": "0.1.0",
+    "description": "Bridging the digital `TRUST` gap between companies and customers",
+	"homepage_url": "https://github.com/authifyWeb/authifyNow",
+    "icons": {
+      "64": "images/icon64.png",
+      "32": "images/icon32.png"
+	},
+
+
+	"key":"be51100931dfa55062c688e0147d4ced",
+	
+	"action": {
+        "default_popup": "popup.html",
+		"default_title": "authifyNow",
+        "default_icon": 
+            "images/icon32.png"
+		
+    },
+	"commands":{
+		"_execute_action":{
+			"suggested_key":{
+			"default":"Alt+Q"
+			}
+		}
+		
+	},
+
+	
+	"options_ui": {
+      "open_in_tab": true,
+      "page": "resources/options.html"
+   },
+	"background": {
+    "service_worker": "resources/background.js"
+    
+	},
+	
+	
+	
+    "permissions": [
+        "tabs"
+    ]
+	
+}
+	
