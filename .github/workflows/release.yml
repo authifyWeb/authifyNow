@@ -29,11 +29,13 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           tag: "v0.1.0"
-          release: "v0.1.0"
+         
           artifacts: "chromium/chromium.zip"
           body: |
+            authifyNow should be compatible with all chromium based browsers. (Brave, Vivaldi, Edge, Chrome, Opera)
+            
             Chromium: [Download v0.1.0](https://github.com/authifyWeb/authifyNow/releases/download/v0.1.0/chromium.zip)
-            authifyNow should be compantible with all chromium based browsers. (Brave, Vivaldi, Edge, Chrome, Opera)
+            
             [Installation](https://github.com/authifyWeb/authifyNow#chromium)
                
           draft: true
