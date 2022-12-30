@@ -1,0 +1,43 @@
+name: 3rd Release
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  create:
+    branches: master
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Create Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Repo
+        uses: actions/checkout@v3
+        
+      - name: Zip Chromium
+        uses: thedoctor0/zip-release@main
+        id: chrome-zip
+        with: 
+          type: zip
+          filename: chromium.zip
+          directory: chromium
+          exclusions: '*.md*'  
+      - name: Release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: "v0.1.0"
+          release: "v0.1.0"
+          artifacts: "chromium/chromium.zip"
+          body: |
+            Chromium: [Download v0.1.0](https://github.com/authifyWeb/authifyNow/releases/download/v0.1.0/chromium.zip)
+            authifyNow should be compantible with all chromium based browsers. (Brave, Vivaldi, Edge, Chrome, Opera)
+            [Installation](https://github.com/authifyWeb/authifyNow#chromium)
+               
+          draft: true
+          name: " authifyNow v0.1.0"
+          generateReleaseNotes: true
+          makeLatest: true
+          
