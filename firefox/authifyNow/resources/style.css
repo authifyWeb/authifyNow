@@ -1,0 +1,309 @@
+/* montserrat-regular - latin Self-Hosted GoogleFont*/
+@font-face {
+	font-family: 'Montserrat';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('/fonts/montserrat-v25-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('fonts/montserrat-v25-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/montserrat-v25-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/montserrat-v25-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('fonts/montserrat-v25-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/montserrat-v25-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+
+/* open-sans-regular - latin  Self-Hosted GoogleFont*/
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('fonts/open-sans-v34-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('fonts/open-sans-v34-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/open-sans-v34-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/open-sans-v34-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('fonts/open-sans-v34-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/open-sans-v34-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+
+body{
+	display: inline-block !important;
+	height: 500px;
+	width: 500px;
+	background-color: #1f282d;
+	font-family: 'OpenSans', sans-serif;
+	letter-spacing:1.1px;
+	padding:0px; margin:0px;
+	border:2px solid white;
+}
+
+
+#logo a {
+   
+    
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 3px;
+    font-size: 18px;
+    font-weight: 400;
+}
+	
+
+
+
+.row {
+  display: flex;
+}
+
+
+.column {
+  flex: 50%;
+  margin-left:20px;
+  margin-right:20px;
+  
+ 
+}
+#version_box{
+	
+	text-align:right;
+}
+
+
+
+
+
+	
+	#Hostname {
+	white-space: wrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: white;
+	text-align:left;
+	margin-top:10px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	font-size:11px;
+	border: dotted white;
+	border-width: 1px;
+	
+}
+	
+	
+
+.hostname_block{
+	
+	text-align:center;
+	padding-top:3px;
+	
+	
+	
+
+}
+#version a{
+		text-decoration: none;
+		color: yellow;
+		font-size:13px;
+		
+	
+		}
+
+
+
+#version{
+	
+	font-size:13px;
+	color: white;
+	//background-color:#FDFF8F;
+	text-align:right;
+	margin-top:10px;
+	text-decoration: none;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	
+	border: solid white;
+	border-width: 1px;
+	
+}
+
+
+hr{
+	margin-top:10px;
+	width:70%
+}
+.output{
+	font-size: 13px;
+}
+#data{
+	color: white;
+	text-align:center;
+	padding-left: 50px;
+	padding-right: 50px;
+	font-size:14px;
+	
+}
+
+#disclaimer{
+	color:white;
+	text-align:center;
+	padding-top:10px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+/* ToolTip Starts Here   Modified from w3schools */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  padding-bottom:1px;
+  border-bottom: 1px dashed white;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you move the cursor over the element */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity:1;
+}
+
+
+
+.footer{
+	
+	position:fixed;
+	text-align:center;
+	top: 90vh;
+	padding-bottom:4px;
+	width: 100%;
+	color:white;
+	
+}
+
+
+
+.tooltip_footer {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1px;
+  border-bottom: 1px dashed white;
+}
+
+.tooltip_footer .tooltiptext {
+  visibility: hidden;
+  width: 190px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip_footer .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you move the cursor over the element */
+.tooltip_footer:hover .tooltiptext {
+  visibility: visible;
+  opacity:1;
+}
+/* hits.sh ends */
+.FooterLinks{
+	margin-top:3px;
+	
+	
+}
+
+.FooterLinks a{
+	color:white;
+	font-size:12px;
+	text-decoration:none;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#donate_box{
+	position: fixed;
+	//top:90vh;
+	bottom:2.5vh;
+	right:3vw;
+	
+	
+}
+
+#donate{
+	
+	
+	
+	background-color: #316e7d;   /*   #FDFF8F; */
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	
+	border: solid white;
+	border-width: 1px;
+}
+
+#donate a{
+	color:white;
+	text-decoration:none;
+	font-weight: bold;
+	font-family: 'OpenSans', sans-serif;
+	font-size:14px;
+
+}
+.pixel{
+	
+	position:fixed;
+	bottom:1.5em;
+	left:1em;
+	padding-right:100px;
+}
+
