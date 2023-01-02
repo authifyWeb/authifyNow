@@ -8,7 +8,7 @@ authifyNow get data from [authifyURL-Database](https://github.com/authifyWeb/aut
 * [Data Source](https://github.com/authifyWeb/authifyURL-Database)
 * [Installation](https://github.com/authifyWeb/authifyNow#installation)  
   - [Chromium](https://github.com/authifyWeb/authifyNow#chromium)
-  - Firefox
+  - [Firefox](https://github.com/authifyWeb/authifyNow#firefox)
 * [How to Trust](https://github.com/authifyWeb/authifyURL-Database#how-to-trust)
 * [Disclaimer](https://github.com/authifyWeb/authifyNow#disclaimer)
 * [Copyright](https://github.com/authifyWeb/authifyNow#copyright)
@@ -24,12 +24,16 @@ I think this will help them to identify it. Atleast, a very little bit. If this 
 ### Installation
 #### Chromium
   `authifyNow should be compatible with any Chromium-based browser. (Brave, Vivaldi, Edge, Chrome, Opera)`
-* Download latest release from the release page(ZIP File).
+* Download latest release from the [release page](https://github.com/authifyWeb/authifyNow/releases)(ZIP File).
 * Unzip the file, and now you'll have a folder `authifyNow-chrome`
 * Move this folder to a permanent location. Do not delete this file after installation. (It's better if you have a custom folder where you store all your locally installed extensions.)
 * Go to extension page on your browser. `chrome://extensions`
 * Toggle and Enable Developer Mode.
 * Click Load unpacked and select the extension folder. 
+
+#### Firefox
+
+* Install from [Mozilla Addons page](https://addons.mozilla.org/en-US/firefox/addon/authifynow/)
  
 ### How We Verify
 Once you click on the extension , we get accesss to your current URL, and search the URL in the data obtained from the database. When there is an exact string match we display the data. We only verify the authenticity of the link, and any action communication and interaction between you as the user and the company or organisation is your responsibility. 
