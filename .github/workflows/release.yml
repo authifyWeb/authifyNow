@@ -2,11 +2,8 @@ name: Release
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  create:
-    branches: master
-
   # Allows you to run this workflow manually from the Actions tab
+  
   workflow_dispatch:
 
 jobs:
@@ -28,18 +25,19 @@ jobs:
       - name: Release
         uses: ncipollo/release-action@v1
         with:
-          tag: "v0.1.0"
+          tag: "v0.1.2"
          
           artifacts: "chromium/chromium.zip"
           body: |
             authifyNow should be compatible with all chromium based browsers. (Brave, Vivaldi, Edge, Chrome, Opera)
             
-            Chromium: [Download v0.1.0](https://github.com/authifyWeb/authifyNow/releases/download/v0.1.0/chromium.zip)
+            Chrome Store: [Download ](https://chrome.google.com/webstore/detail/authifynow/ogmhhgdbeabejjnhpdojnkkfhkklicln)
+            Mozilla Store: [Download](https://addons.mozilla.org/en-US/firefox/addon/authifynow/)
+            Microsoft Store: [Download](https://microsoftedge.microsoft.com/addons/detail/authifynow/jfmmjikleekghangeofaggmmnikniafa)
             
-            [Installation](https://github.com/authifyWeb/authifyNow#chromium)
                
           draft: true
-          name: " authifyNow v0.1.0"
+          name: " authifyNow v0.1.2"
           generateReleaseNotes: true
           makeLatest: true
           
