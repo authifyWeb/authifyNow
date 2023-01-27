@@ -29,7 +29,7 @@
 }
 
 body{
-	
+	display: inline-block !important;
 	height: 500px;
 	width: 500px;
 	background-color: #1f282d;
@@ -169,6 +169,7 @@ hr{
   visibility: hidden;
   width: 120px;
   background-color: #555;
+  font-size:12px;
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -224,6 +225,7 @@ hr{
 .tooltip_footer .tooltiptext {
   visibility: hidden;
   width: 190px;
+  font-size:10px;
   background-color: #555;
   color: #fff;
   text-align: center;

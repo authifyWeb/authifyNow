@@ -1,26 +1,4 @@
-
-
-function checkversion(){
-		async function fetchData() 
-		{
-			const res=await fetch ("https://raw.githubusercontent.com/authifyWeb/authifyNow/main/version_control/latest.json");
-			const response=await res.json();
-			var json = response;
-			//console.log(json);
-				var vrs="v0.1.0";
-		
-				if(vrs != response.chrome)
-				{
-					version.innerHTML = `<a href="https://github.com/authifyWeb/authifyNow/releases" target="_blank" style="color:#FDFF8F";>📢 New Version Available</a> `;
-				}
-				else{ version.innerHTML = "You're all updated 🚀";}
-		}
-		
-		fetchData();
-	}	
-
-
-    function compare(link){
+ function compare(link){
 	
 	
 		
@@ -46,12 +24,17 @@ function checkversion(){
 					{
 						
 						
-						Data = `<h4 style="color:white";> ` + link + ` <p> <span style="color:#A2FB15; font-size: 16px;">This site is verified by authifyURL.</span> &nbsp;<span class="tooltip"> ✅ <span class="tooltiptext">You can use this website with complete trust. </span> </p> <p style="font-size:16px;"><span >Part of : </span>` +response.source[i].name+ `</p></h4>` ;
+						var Data=`<div style="color:white;">  ` + link + `</br> <p> <span style="color:#A2FB15; font-size: 16px; ">Verified by authifyURL.</span> &nbsp;<span class="tooltip"> ✅ <span class="tooltiptext">This website is valid and legal. </span> </p><p style="font-size:16px;"><span>Organisation : </span> <span style="color:yellow;">`  +response.source[i].name+ `</span></p></div>` ;
 						
-						Disclaimer =`Read <a href ="https://github.com/authifyWeb/authifyNow#how-we-verify" style="color:white; target ="_blank"> how we verify</a> what is valid and what is not.`;
+						var Disclaimer=`Read <a href ="https://github.com/authifyWeb/authifyURL#how-we-verify" style="color:white"; target ="_blank"> how we verify</a> what is valid and what is not. `;
 						
-						data.innerHTML= Data;
-						disclaimer.innerHTML=Disclaimer;
+						
+						let cleanData = DOMPurify.sanitize(Data);
+						let cleanDisclaimer = DOMPurify.sanitize(Disclaimer);
+						
+						data.innerHTML= cleanData;
+						disclaimer.innerHTML=cleanDisclaimer;
+						
 						
 						return;
 						
@@ -61,12 +44,13 @@ function checkversion(){
 					{
 						
 						
-						Data = `<h4 style=" color:white" padding-top:10px;>` + link + `<p><span style="color:red;font-size: 16px;"> We weren't able to verify this site. Please be cautioned continuing in this site.</span> &nbsp; <span class="tooltip"> ❌ <span class="tooltiptext">This doesn't mean that it's a fake website, it's just not in our database. </span> </p>`;
+						var Data = `<div style=" color:white;" >` + link + `<p><span style="color:red;font-size: 16px;"> We weren't able to verify this site. Please be cautioned continuing in this site.</span> &nbsp; <span class="tooltip"> ❌ <span class="tooltiptext">Possibly scam. If unsure please take help from someone you know. </span> </p> </div>` ;
+						var Disclaimer=`Read <a href ="https://github.com/authifyWeb/authifyURL#how-we-verify" style="color:white;" target ="_blank"> how we verify</a> what is valid and what is not. `;
+						let cleanData = DOMPurify.sanitize(Data);
+						let cleanDisclaimer = DOMPurify.sanitize(Disclaimer);
 						
-						Disclaimer=`Read <a href ="https://github.com/authifyWeb/authifyNow#how-we-verify" style="color:white"; target ="_blank";> how we verify</a> what is valid and what is not.`;
-						
-						data.innerHTML= Data;
-						disclaimer.innerHTML=Disclaimer;
+						data.innerHTML= cleanData;
+						disclaimer.innerHTML=cleanDisclaimer;
 						
 						
 					}
@@ -94,29 +78,78 @@ function checkversion(){
 	//console.log(url);
 		if (protocol == "about:" || protocol == "chrome:" || protocol == "edge:" || protocol =="view-source:" || protocol=="chrome-extension:" || protocol=="moz-extension:" )
 		{
-			var output = `<h3>This page is part of your browser</h3>`;
+			var output = `This page is part of your browser`;
 			
 				return output ;
 		}
 		
-		else if(protocol != "https:" ) return `<h3> This website is not secure. Please refrain from entering or submitting personal data and please don't download files from such sources.</h3>`;
+		else if(protocol != "https:" ) return ` This website is not secure. Please refrain from entering or submitting personal data and please don't download files from such sources.`;
 		
-		else if( (origin =="https://www.facebook.com") || (origin=="https://www.instagram.com") || (origin== "https://www.youtube.com") )  {
-				link= hostname+pathname;
+		else if( origin =="https://www.facebook.com" )  
+			{	
+				link= hostname+'/'+pathname.split('/')[1];
 				var output = compare(link);
-				data.innerHTML= output;
-				return ;
-				
+				return output;
 			}
-		else if(origin =="https://twitter.com") {link = hostname + pathname.toLowerCase(); var output = compare(link);
-				data.innerHTML= output;
-				return ;}
+		else if(origin =="https://twitter.com")
+			{
+				
+				link=hostname+'/'+pathname.split('/')[1].toLowerCase();
+				var output = compare(link);	
+				return output;
+			}
+			/* Youtube has 3 different types of URLS. github.com/authifyWeb/authifyNow/issues/14#issuecomment-1403993482 */
+		else if(origin=="https://www.youtube.com")
+				{
+					var channel=(pathname.split('/')[1]);
+					if(channel=="channel") { link = hostname +'/' +pathname.split('/')[1]+ '/' + pathname.split('/')[2];}
+					else if(channel=="c") { 
+					var id=pathname.split('/')[2].toLowerCase();
+					link= hostname+'/'+id}
+					else{link=hostname+'/'+pathname.split('/')[1].toLowerCase();}
+					var output = compare(link);	
+					return output;
+				}
+		else if( origin=="https://www.twitch.tv" || origin=="https://www.instagram.com" )
+			{
+				link = hostname + pathname.toLowerCase(); 
+				var output = compare(link); 
+			
+			}
+		else if(origin=="https://www.reddit.com" || origin=="https://old.reddit.com")
+			{	
+				link=hostname +'/' +pathname.split('/')[1]+ '/' + pathname.split('/')[2].toLowerCase();
+				var output = compare(link);
+				
+				}
+		else if(origin == "https://github.com")
+				{
+				var id= pathname.split('/')[1];
+					
+					if(id=="orgs" || id=="sponsors")
+						{ var link= hostname+'/'+pathname.split('/')[2].toLowerCase();
+						}
+					else{
+						var link=hostname+'/'+pathname.split('/')[1].toLowerCase();
+						}
+				var output = compare(link);	
+				return output;	
+				}
+		else if(origin == "https://ko-fi.com" || origin =="https://www.buymeacoffee.com" || origin=="https://liberapay.com" || origin =="https://opencollective.com")
+				{
+					
+					link=hostname+'/'+pathname.split('/')[1].toLowerCase();
+					var output = compare(link);
+					return output ;
+				}
+			
 		
+					
 		else
 			
 			{
 				var output = compare(hostname);
-				data.innerHTML= output;
+				
 				return ;
 			}
 			
@@ -143,30 +176,35 @@ function checkversion(){
 	var origin = url.origin;
 	var href= url.href;
 	var pathname=url.pathname
-	version.innerHTML = "Checking for updates";
+	version.innerText = "🛡️ Stay Secure 🔐" ;
 	
-	checkversion();
+	
 	//console.log( url+"\n"+hostname+"\n"+protocol+"\n"+origin+"\n"+href+"\n"+pathname)
 	
 	protocolcheck();
 	
-    
 	
 	
 		function protocolcheck( )
 		{
-		if(protocol=="about:" || protocol =="view-source:"){Hostname.innerHTML = protocol; 
+		if(protocol=="about:" || protocol =="view-source:"){Hostname.innerText = protocol; 
 			}
 		else{
-		Hostname.innerHTML =  origin;
+		Hostname.innerText =  origin;
 		}
 		}
 		
 	var output= authification(url, href, origin, hostname,protocol,pathname); 
 		
-		data.innerHTML = (output || "Verifying");
+		data.innerText = (output || "Verifying");
 
 	
 	});
 //});                                                     // for DOMContentLoaded
+
+
+
+
+
+
 
