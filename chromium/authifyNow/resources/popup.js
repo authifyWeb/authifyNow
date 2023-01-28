@@ -142,7 +142,16 @@
 					var output = compare(link);
 					return output ;
 				}
-			
+		else if(origin=="https://www.patreon.com")
+				{	
+					var id=pathname.split('/')[1];
+						if(id=="join")
+							{ var link= hostname+'/'+pathname.split('/')[2].toLowerCase();}
+						else { var link = hostname+'/'+pathname.split('/')[1].toLowerCase(); }
+					var output = compare(link);	
+					return output;	
+				
+				}	
 		
 					
 		else
