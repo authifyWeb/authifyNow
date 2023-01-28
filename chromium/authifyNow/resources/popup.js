@@ -152,7 +152,7 @@
 					return output;	
 				
 				}	
-		// Filter for crouwdunding platforms
+		// Filter for crowdfunding platforms
 		else if(origin=="https://milaap.org"|| origin=="https://www.impactguru.com"|| origin=="https://www.ketto.org")
 				{var output = `Though the website is valid, authifyURL can't be used to verify the legalility of these fundraisers, please contact them directly.`;
 				return output;	}
