@@ -142,8 +142,20 @@
 					var output = compare(link);
 					return output ;
 				}
-			
-		
+		else if(origin=="https://www.patreon.com")
+				{	
+					var id=pathname.split('/')[1];
+						if(id=="join")
+							{ var link= hostname+'/'+pathname.split('/')[2].toLowerCase();}
+						else { var link = hostname+'/'+pathname.split('/')[1].toLowerCase(); }
+					var output = compare(link);	
+					return output;	
+				
+				}	
+		// Filter for crowdfunding platforms
+		else if(origin=="https://milaap.org"|| origin=="https://www.impactguru.com"|| origin=="https://www.ketto.org")
+				{var output = `Though the website is valid, authifyURL can't be used to verify the legalility of these fundraisers, please contact them directly.`;
+				return output;	}
 					
 		else
 			
