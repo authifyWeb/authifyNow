@@ -240,7 +240,7 @@ function authification(url, href, origin, hostname,protocol,pathname,search,doma
               else if(path1=="collections"){var link=hostname+'/'+ pathname.split('/')[2].toLowerCase();}
               else{link=domain;}
             }
-            console.log(link);
+            
             var output=compare(link,href); return output;
           }
     else if(hostname=="bio.site"){
@@ -359,7 +359,7 @@ function authification(url, href, origin, hostname,protocol,pathname,search,doma
 
   	else{
     link=domain;
-    console.log(link);
+    
     
     var output= compare(link,hostname);
     
