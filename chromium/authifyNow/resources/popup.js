@@ -7,10 +7,11 @@ function compare(link,display_link){
 			var blink=link;
 			try {
 			  const baseUrl = "https://apiurl.authifyweb.com/api/products?urls="; 
-			  const endpoint = blink;
+			  const endpoint = blink+`&select=name,urls`;
 			  const apiUrl = `${baseUrl}${endpoint}`;
 			  const response = await fetch(apiUrl);
 			  const data = await response.json();
+			  
 			  
 			  	 
 			  if (!response.ok) {
