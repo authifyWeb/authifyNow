@@ -1,6 +1,6 @@
 function authification(url, href, origin, hostname,protocol,pathname,search,domain) 
 {
-  console.log("ntho");
+  
 	if(protocol != "https:" ) {return ` This website is not secure. Please refrain from submitting personal data and don't download files from such sources`;}
     else if(origin=="https://duckduckgo.com")
   { if(pathname=="/") return ` This is DuckDuckGo Search Results page. Be wary of the links you click from a results page.`;
@@ -240,7 +240,7 @@ function authification(url, href, origin, hostname,protocol,pathname,search,doma
               else if(path1=="collections"){var link=hostname+'/'+ pathname.split('/')[2].toLowerCase();}
               else{link=domain;}
             }
-            console.log(link);
+            
             var output=compare(link,href); return output;
           }
     else if(hostname=="bio.site"){
@@ -359,7 +359,7 @@ function authification(url, href, origin, hostname,protocol,pathname,search,doma
 
   	else{
     link=domain;
-    console.log(link);
+    
     
     var output= compare(link,hostname);
     
