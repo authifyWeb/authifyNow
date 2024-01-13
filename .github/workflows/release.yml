@@ -33,11 +33,11 @@ jobs:
             
             Chrome Store: [Download ](https://chrome.google.com/webstore/detail/authifynow/ogmhhgdbeabejjnhpdojnkkfhkklicln)
             Mozilla Store: [Download](https://addons.mozilla.org/en-US/firefox/addon/authifynow/)
-            Microsoft Store: [Download](https://microsoftedge.microsoft.com/addons/detail/authifynow/jfmmjikleekghangeofaggmmnikniafa)
+            
             
                
           draft: true
-          name: " authifyNow v0.1.2"
+          name: " authifyNow v0.1.4"
           generateReleaseNotes: true
           makeLatest: true
           
