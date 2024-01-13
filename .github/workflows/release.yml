@@ -29,7 +29,7 @@ jobs:
          
           artifacts: "chromium/chromium.zip"
           body: |
-            authifyNow should be compatible with all chromium based browsers. (Brave, Vivaldi, Edge, Chrome, Opera)
+            authifyNow should be compatible with all chromium based browsers (Brave, Vivaldi, Edge, Chrome, Opera) and Firefox
             
             Chrome Store: [Download ](https://chrome.google.com/webstore/detail/authifynow/ogmhhgdbeabejjnhpdojnkkfhkklicln)
             Mozilla Store: [Download](https://addons.mozilla.org/en-US/firefox/addon/authifynow/)
