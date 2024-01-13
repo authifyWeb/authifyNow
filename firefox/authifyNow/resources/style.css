@@ -42,7 +42,8 @@ body{
 
 #logo a {
    
-    
+    position:fixed;
+    top:2vh;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 3px;
@@ -50,7 +51,13 @@ body{
     font-weight: 400;
 }
 	
-
+.brand_arch {
+  color: goldenrod;
+  font-size: 10px;
+  position: absolute;
+  left: 50px;
+  top: 31px;
+}
 
 
 .row {
@@ -84,7 +91,7 @@ body{
 	margin-top:10px;
 	padding-left:10px;
 	padding-right:10px;
-	padding-top:5px;
+	padding-top:3px;
 	padding-bottom:5px;
 	font-size:11px;
 	border: dotted white;
@@ -117,7 +124,7 @@ body{
 	
 	font-size:13px;
 	color: white;
-	//background-color:#FDFF8F;
+	background-color:#767676;
 	text-align:right;
 	margin-top:10px;
 	text-decoration: none;
@@ -272,7 +279,7 @@ hr{
 
 #donate_box{
 	position: fixed;
-	//top:90vh;
+	top:90vh;
 	bottom:2.5vh;
 	right:3vw;
 	
@@ -301,11 +308,27 @@ hr{
 	font-size:14px;
 
 }
-.pixel{
-	
-	position:fixed;
-	bottom:1.5em;
-	left:1em;
-	padding-right:100px;
+#status_box{
+  position: fixed;
+	top:90vh;
+	bottom:2.5vh;
+	left:3vw;
 }
 
+#status{
+	background-color: "";
+  padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+  border: solid #767676;
+	border-width: 1px;
+}
+#status a{
+	color:#767676;
+	text-decoration:none;
+	font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
+	font-size:11px;
+
+}
