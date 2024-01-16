@@ -2,16 +2,14 @@
 
 <p>authifyNow is an early proof-of-concept on how a centralized database and public API can empower users to instantly verify the ownership of a website, thus protecting them from impersonation scams. A win-win solution for both users and brands.</p>
 
-authifyNow get data from [authifyURL-Database](https://github.com/authifyWeb/authifyURL-Database)
+
 
 
 ## <ins>Quick Links</ins>
-* [Why I created this?](https://github.com/authifyWeb/authifyNow/edit/main/README.md#why-i-created-this)
-* [Data Source](https://github.com/authifyWeb/authifyURL-Database)
 * [Installation](https://github.com/authifyWeb/authifyNow#installation)  
   - [Chromium](https://github.com/authifyWeb/authifyNow#chromium)
   - [Firefox](https://github.com/authifyWeb/authifyNow#firefox)
-* [How to Trust](https://github.com/authifyWeb/authifyURL-Database#how-to-trust)
+* [How to Trust](https://github.com/authifyWeb/authifyNow#how-to-trust)
 * [Disclaimer](https://github.com/authifyWeb/authifyNow#disclaimer)
 * [Copyright](https://github.com/authifyWeb/authifyNow#copyright)
 * [License](https://github.com/authifyWeb/authifyNow#license)
@@ -20,8 +18,11 @@ authifyNow get data from [authifyURL-Database](https://github.com/authifyWeb/aut
 
 
 ### Why I created this?
-I personally love internet and almost everything that comes associated with it. It made our(atleast mine) lives far easier than what it was for previous generations. Though with the advent of internet also came many issues. One is, anybody can buy a domain, and they can end up using it for any purposes. There is no body to regulate what these purposes are. Scammers use this abilty to scam people money and and phish for personal data. While many of the current generation does know to a certain limit to easily identify what is legit and what's not, not everyone feels the same. For some it's not easy to verify what's legit, and whats scam. 
-I think this will help them to identify it. Atleast, a very little bit. If this tool can help them protect their digital life atleast a very little bit, I think it's worth creating and maintaining it. 
+To empower internet users to easily identify phishing scams easily.
+
+authifyNow is an early proof-of-concept on how a centralized database and public API can empower users to instantly verify the ownership of a website, thus protecting them from impersonation scams. A win-win solution for both users and brands.
+
+
 
 ### Installation
 #### Chromium
@@ -36,6 +37,10 @@ I think this will help them to identify it. Atleast, a very little bit. If this 
 #### Firefox
 
 * Install from [Mozilla Addons page](https://addons.mozilla.org/en-US/firefox/addon/authifynow/)
+
+### How to TRUST
+
+Note: The current version of authifyNow sources data from public domain, whereas in the future data will be managed by the company itself. 
  
 ### How We Verify
 Once you click on the extension , we get accesss to your current URL, and search the URL in the data obtained from the database. When there is an exact string match we display the data. We only verify the authenticity of the link, and any action communication and interaction between you as the user and the company or organisation is your responsibility. 
