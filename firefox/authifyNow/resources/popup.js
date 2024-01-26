@@ -118,7 +118,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
 		}
 	var domain = filterdomain_from_hostname(hostname);
 	
-	var output = authification(url, href, origin, hostname,protocol,pathname,search,domain); 
+	var output = filtering(url, href, origin, hostname,protocol,pathname,search,domain); 
   
 	
 	

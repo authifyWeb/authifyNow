@@ -1,4 +1,4 @@
-function authification(url, href, origin, hostname,protocol,pathname,search,domain) 
+function filtering(url, href, origin, hostname,protocol,pathname,search,domain) 
 {
 
 	if(protocol != "https:" ) {return ` This website is not secure. Please refrain from submitting personal data and don't download files from such sources`;}
