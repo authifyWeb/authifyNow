@@ -25,7 +25,7 @@ jobs:
       - name: Release
         uses: ncipollo/release-action@v1
         with:
-          tag: "v0.1.4"
+          tag: "v0.1.5"
          
           artifacts: "chromium/chromium.zip"
           body: |
@@ -37,7 +37,7 @@ jobs:
             
                
           draft: true
-          name: " authifyNow v0.1.4"
+          name: " authifyNow v0.1.5"
           generateReleaseNotes: true
           makeLatest: true
           
