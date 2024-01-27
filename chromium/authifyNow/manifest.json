@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "authifyNow",
   "author": "webVerts",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Bridging the digital `TRUST` gap between companies and customers",
   "homepage_url": "https://github.com/authifyWeb/authifyNow",
   "icons": {

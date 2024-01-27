@@ -7,11 +7,11 @@ function compare(link,display_link){
 		var blink=link;
 		try {
 		  const baseUrl = "https://apiurl.authifyweb.com/api/products?urls="; 
-		  const endpoint = blink+`&select=name,urls`;
+		  const endpoint = blink+`&select=name,urls,own`;
 		  const apiUrl = `${baseUrl}${endpoint}`;
 		  const response = await fetch(apiUrl);
 		  const data = await response.json();
-		  console.log(data);
+		  
 		  
 		  
 			   
@@ -24,14 +24,14 @@ function compare(link,display_link){
 			const dataContent = DOMPurify.sanitize(`
 			<div> <p style="color:white; overflow: hidden; text-overflow: ellipsis;">${display_link}</p>
 				<p>
-				  <span style="color:red; font-size: 16px;">We weren't able to verify this site. Please be cautioned continuing on this site.</span>
+				  <span style="color:red; font-size: 16px;">The link doesn't match with any verified URLs in our database. Please be cautioned continuing on this site.</span>
 				  &nbsp; <span class="tooltip"> ❌ <span class="tooltiptext">Possibly scam. If unsure please take help from someone you know.</span></span>
 				</p>
 			  </div>
 			`);
-			var Disclaimer=`All data sourced from public domain`;
+			//var Disclaimer=`All data sourced from public domain`;
 			dataElement.innerHTML = dataContent;
-			discElement.innerText=Disclaimer;
+			//discElement.innerText=Disclaimer;
 		  } else {
 				var ownerInfo;
 				if (data.Source.length == 1) {
@@ -41,7 +41,7 @@ function compare(link,display_link){
 				}
 				else{ /* This won't be executed in any case, but just in case, I don't want to 'return' empty handed */
 					dataContent = DOMPurify.sanitize("The link doesn't match with any verified URLs in our database.");
-					var Disclaimer="All data sourced from public domain"; 
+					var Disclaimer="All data sourced from public domain."; 
 					 dataElement.innerText = dataContent;
 					 discElement.innerText=Disclaimer;
 					return ;} 
@@ -54,7 +54,8 @@ function compare(link,display_link){
 					<p style="font-size:16px;"><span> Organisation: </span> <span style="color:yellow;">${ownerInfo}</span></p>
 					</div>
 				  `);
-				  var Disclaimer=`All data sourced from public domain`;
+				  if ("own" in data.Source[0]) {var Disclaimer=`All data sourced from public domain`;} 
+				  else { var Disclaimer=`Official data submitted by the organisation above.`; }
 				  dataElement.innerHTML = dataContent;
 				  discElement.innerText=Disclaimer;
 				  
@@ -118,7 +119,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
 		}
 	var domain = filterdomain_from_hostname(hostname);
 	
-	var output = authification(url, href, origin, hostname,protocol,pathname,search,domain); 
+	var output = filtering(url, href, origin, hostname,protocol,pathname,search,domain); 
   
 	
 	
