@@ -25,7 +25,7 @@ jobs:
       - name: Release
         uses: ncipollo/release-action@v1
         with:
-          tag: "v0.1.5"
+          tag: "v0.1.6"
          
           artifacts: "chromium/chromium.zip"
           body: |
