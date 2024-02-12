@@ -55,7 +55,7 @@ function compare(link,display_link){
 					</div>
 				  `);
 				  if ("own" in data.Source[0]) {var Disclaimer=`All data sourced from public domain`;} 
-				  else { var Disclaimer=`Official data submitted by the organisation above.`; }
+				  else { var Disclaimer=`Data submitted by the organisation above.`; }
 				  dataElement.innerHTML = dataContent;
 				  discElement.innerText=Disclaimer;
 				  
