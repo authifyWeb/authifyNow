@@ -10,11 +10,11 @@
   - [Chromium](https://github.com/authifyWeb/authifyNow#chromium)
   - [Firefox](https://github.com/authifyWeb/authifyNow#firefox)
 * [How to Trust](https://github.com/authifyWeb/authifyNow#how-to-trust)
-* [Disclaimer](https://github.com/authifyWeb/authifyNow#disclaimer)
+* [Disclaimer](https://authifyweb.com/pages/disclaimer.html)
 * [Copyright](https://github.com/authifyWeb/authifyNow#copyright)
 * [License](https://github.com/authifyWeb/authifyNow#license)
-* [Privacy Policy](https://github.com/authifyWeb/authifyNow/blob/main/documentation/privacy-policy.md)
-* [Terms & Conditions](https://github.com/authifyWeb/authifyNow/blob/main/documentation/terms.md)
+* [Privacy Policy](https://authifyweb.com/pages/privacy)
+* [Terms & Conditions](https://authifyweb.com/pages/terms)
 
 
 ### Why I created this?
